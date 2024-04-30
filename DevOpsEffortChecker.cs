@@ -9,6 +9,7 @@ namespace DevOpsHoursChecker
 {
     class Program
     {
+        //This is a URL and a Personal Access Token to a fake project I set up on a junk DevOps account. No security risk here.
         internal const string azureDevOpsOrganizationUrl = "https://dev.azure.com/fungusanimalclark/";
         internal const string pat = "6xg3muxrgynqygp2m7b3hdar7llsoywotglupsid5d55xxcuyria";
         internal const string projectName = "FakeProject";
@@ -30,9 +31,8 @@ namespace DevOpsHoursChecker
 
             WorkItemQueryResult workItemQueryResult = wiclient.QueryByWiqlAsync(wiql).Result;
 
-
-            //LOGIC TIME!!!
-
+            //I got so excited at this point once I finally had a query result I could work with! I was on the home stretch!
+            
             //Finds Number of Largest Id
             int largestID = 0;
 
